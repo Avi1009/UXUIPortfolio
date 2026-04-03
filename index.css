@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background: #05070d;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(5,7,13,0.95);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 60px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6ee7ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background: cyan;
+  bottom: -6px;
+  left: 0;
+  transition: 0.4s;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020617, #050a1f);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.button-glow {
+  padding: 14px 34px;
+  border-radius: 40px;
+  background: linear-gradient(to right, cyan, violet);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FEATURES */
+.features {
+  padding: 140px 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  background: #0a0f2a;
+  padding: 40px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  left: 0;
+  top: -100%;
+  background: linear-gradient(to bottom, cyan, violet);
+  transition: 0.4s;
+}
+
+.feature-card:hover .bar {
+  top: 0;
+}
+
+/* ANIMATIONS */
+@keyframes slideIn {
+  from {opacity: 0; transform: translateX(-100px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.slide-in { animation: slideIn 1.3s ease forwards; }
+.fade-in { animation: fadeIn 2s ease forwards; }
+
+
+/* EXTERNAL PROJECT BUTTONS */
+.external-projects {
+  padding: 120px 80px;
+  text-align: center;
+  background: #020617;
+}
+
+.external-projects h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.external-btn-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.external-btn {
+  padding: 18px 48px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(to right, cyan, violet);
+  transition: 0.35s ease;
+  box-shadow: 0 0 0 rgba(0, 255, 255, 0);
+}
+
+.external-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 255, 255, 0.35);
+}

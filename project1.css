@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #020617, #05070d);
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(5,7,13,0.9);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 60px;
+  }
+  
+  .logo {
+    font-size: 22px;
+    color: cyan;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* PROJECTS */
+  .projects {
+    padding: 180px 60px;
+    text-align: center;
+  }
+  
+  .project-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  .project-card {
+    background: #0a0f2a;
+    padding: 50px;
+    border-radius: 18px;
+    transition: 0.4s;
+    box-shadow: 0 0 0 rgba(0,255,255,0.2);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(138,180,255,0.25);
+  }
+
+  h5 {
+    line-height: 28px;
+    text-align: left;
+  }
+
+  p {
+    color: rgba(140, 210, 255, 0.9);  /* soft professional light blue */
+  }
+  
